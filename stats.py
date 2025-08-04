@@ -30,5 +30,4 @@ def sort_on(f_path):
             num_list = {"char": item[0], "num": item[1]}
             sort_list.append(num_list)
     sort_list.sort(reverse=True, key=lambda num_list: num_list["num"])
-    
     return sort_list
