@@ -20,3 +20,15 @@ def get_characters(f_path):
         else:
             char_count[l_char] = 1
     return char_count
+
+def sort_on(f_path):
+    num_list = {}
+    sort_list = []
+    items = list(get_characters(f_path).items())
+    for item in items:
+        if item[0].isalpha():
+            num_list = {"char": item[0], "num": item[1]}
+            sort_list.append(num_list)
+    sort_list.sort(reverse=True, key=lambda num_list: num_list["num"])
+    
+    return sort_list
